@@ -1,6 +1,6 @@
 # hello world | different types of print
 #print("hello world")
-#print("first", "second", "third", sep=' | ')  #by-default sep is comma, we can change like this
+#print("first", "second", "third", sep=' | ')  #by-default sep is single space, we can change like this
 #print("Now", "I", "gonna", "try", "end", "arg", sep="~", end="...")  #places content at the end of the whole sentence
 
 #============Rules===============
@@ -37,7 +37,14 @@ Print("Hello")  # NameError: name 'Print' is not defined
 # Make sure each is on a separate line      
 """
 
-print("Aayan Ahmed")
-print("Javascript")
-print("A dog can only barks at lion for himself \n but the same dog can fight with lion to protect his owner")
+# print("Aayan Ahmed")
+# print("Javascript")
+# print("A dog can only barks at lion for himself \n but the same dog can fight with lion to protect his owner")
 
+"""ex 02
+# Create a program that prints this exact output:
+# Name: John | Age: 25 | City: New York
+# Use variables and the sep parameter
+"""
+
+print("Name: John", "Age: 25", "City: New york", sep=' | ')
