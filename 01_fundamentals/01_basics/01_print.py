@@ -47,4 +47,16 @@ Print("Hello")  # NameError: name 'Print' is not defined
 # Use variables and the sep parameter
 """
 
-print("Name: John", "Age: 25", "City: New york", sep=' | ')
+# print("Name: John", "Age: 25", "City: New york", sep=' | ')
+
+
+r'''ex 03
+Print this exact text:
+The file path is: C:\Users\Python\Documents
+She said, "Python is awesome!"
+Column1     Column2     Column3
+'''
+
+print("The file path is: C:\\Users\\Python\\Documents")
+print('She said, "Python is awesome!"')
+print("Column1\t\tColumn2\t\tColumn3")
