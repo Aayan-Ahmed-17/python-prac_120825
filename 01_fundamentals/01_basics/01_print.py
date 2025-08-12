@@ -1,8 +1,7 @@
 # hello world | different types of print
-print("hello world")
-print("first", "second", "third", sep=' | ')  #by-default sep is comma, we can change like this
-print("Now", "I", "gonna", "try", "end", "arg", sep="~", end="...")  #places content at the end of the whole sentence
-
+#print("hello world")
+#print("first", "second", "third", sep=' | ')  #by-default sep is comma, we can change like this
+#print("Now", "I", "gonna", "try", "end", "arg", sep="~", end="...")  #places content at the end of the whole sentence
 
 #============Rules===============
 """
@@ -30,3 +29,15 @@ Print("Hello")  # NameError: name 'Print' is not defined
 
 
 #=============Exercises===========================
+""" ex01
+# Write a program that prints:
+# Line 1: Your name
+# Line 2: Your favorite programming language
+# Line 3: A motivational quote
+# Make sure each is on a separate line      
+"""
+
+print("Aayan Ahmed")
+print("Javascript")
+print("A dog can only barks at lion for himself \n but the same dog can fight with lion to protect his owner")
+
