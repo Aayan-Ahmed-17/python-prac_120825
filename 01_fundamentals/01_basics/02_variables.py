@@ -76,3 +76,17 @@ class = "Python"             # 'class' is a keyword'''
 first_name, last_name, birth_year, favorite_decimal_number, is_like_programming = "Aayan", "Ahmed", 2006, 5.10, True
 
 # print(f"first_name = {first_name}", f"last_name = {last_name}", f"birth_year = {birth_year}",f"favorite_decimal_number = {favorite_decimal_number}", f"is_like_programming = {is_like_programming}", sep='\n')
+
+''' ex02 fix 'em\
+# 1st_place = "Gold"
+# user-email = "test@email.com"  
+# class = "Python Programming"
+# for = 100
+# my var = "test"
+'''
+
+place1 = "Gold"                                       #can't start with num
+user_email = "test@email.com"              #hyphen not allow
+class_ = "Python Programming"             #keyword can't be declared as a variable name
+for_ = 100                                               #keyword can't be declared as a variable name
+my_var = "test"                                       #can't contain spaces
