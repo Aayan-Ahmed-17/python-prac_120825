@@ -59,3 +59,20 @@ class = "Python"             # 'class' is a keyword'''
 # user name = "John"       # SyntaxError: invalid syntax
 # if = "John"                      #SyntaxError: invalid syntax
 # class = "Python"             #SyntaxError: invalid syntax
+
+'''===============Exercises===================='''
+
+'''ex01 "var creation"
+
+# Create variables for:
+# - Your first name
+# - Your last name  
+# - Your birth year
+# - Your favorite number (decimal)
+# - Whether you like programming (True/False)
+# Print each variable with a descriptive label
+'''
+
+first_name, last_name, birth_year, favorite_decimal_number, is_like_programming = "Aayan", "Ahmed", 2006, 5.10, True
+
+# print(f"first_name = {first_name}", f"last_name = {last_name}", f"birth_year = {birth_year}",f"favorite_decimal_number = {favorite_decimal_number}", f"is_like_programming = {is_like_programming}", sep='\n')
