@@ -40,3 +40,22 @@ Can contain letters, digits (0-9), and underscores
 Case sensitive: age and Age are different variables
 Cannot use Python keywords: if, for, while, def, etc.'''
 
+'''==============INVALID names===========
+2user = "John"                # Cannot start with number
+user-name = "John"       # Hyphens not allowed
+user name = "John"       # Spaces not allowed
+if = "John"                      # 'if' is a keyword
+class = "Python"             # 'class' is a keyword'''
+
+
+#List of reserved keywords in python
+# import keyword;
+# print(keyword.kwlist)
+
+'''============Comon Errors============='''
+# 2user = "John"                # invalid decimal literal
+# user-name = "John"       # SyntaxError: cannot assign to expression here.
+# user-name == "John"       # when print will give "NameError: name 'user' is not defined.""
+# user name = "John"       # SyntaxError: invalid syntax
+# if = "John"                      #SyntaxError: invalid syntax
+# class = "Python"             #SyntaxError: invalid syntax
