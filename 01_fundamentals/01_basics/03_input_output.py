@@ -35,8 +35,22 @@ number = 42
 # 3. Use f-strings for formatting
 '''
 
-input_name = input("Enter you name here")
-input_age = input("Enter you age here")
-input_city = input("Enter you city here")
+# input_name = input("Enter you name here")
+# input_age = input("Enter you age here")
+# input_city = input("Enter you city here")
 
-print(f"input_name: {input_name}, input_age: {input_age}, input_city: {input_city}")
+# print(f"input_name: {input_name}, input_age: {input_age}, input_city: {input_city}")
+
+'''ex02: Calculator Input
+# Create a simple calculator that:
+# 1. Asks for two numbers
+# 2. Asks for operation (+, -, *, /)
+# 3. Performs calculation and displays result
+# 4. Handles invalid input gracefully
+'''
+
+a = int(input("Enter first number"))
+b = int(input("Enter second number"))
+result = int(a)+int(b)
+
+print(result)
