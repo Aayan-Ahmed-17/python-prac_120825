@@ -26,3 +26,17 @@ number = 42
 # print(f"Right aligned: '{text:>10}'")
 # print(f"Center aligned: '{text:^10}'")
 # print(f"Zero padded: '{number:05d}'")
+
+
+'''ex 01 basic I/O
+# Create a program that:
+# 1. Asks for user's name, age, and city
+# 2. Displays a formatted message using all three values
+# 3. Use f-strings for formatting
+'''
+
+input_name = input("Enter you name here")
+input_age = input("Enter you age here")
+input_city = input("Enter you city here")
+
+print(f"input_name: {input_name}, input_age: {input_age}, input_city: {input_city}")
