@@ -90,3 +90,15 @@ user_email = "test@email.com"              #hyphen not allow
 class_ = "Python Programming"             #keyword can't be declared as a variable name
 for_ = 100                                               #keyword can't be declared as a variable name
 my_var = "test"                                       #can't contain spaces
+
+'''ex03 Variable Swapping
+# Create two variables: a = 10, b = 20
+# Swap their values without using a temporary variable
+# Print the values before and after swapping
+'''
+
+a = 10
+b = 20
+# print(a, b)
+a, b = b, a
+# print(a, b)
