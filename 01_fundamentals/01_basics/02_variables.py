@@ -27,3 +27,16 @@ ALL_CAPS = "recommended for constants vals"
 _single_leading_underscore = "recommended to use _ in the beginning for private variables"
 
 # print(camelCase, snake_case, ALL_CAPS, _single_leading_underscore, sep='\n')
+
+
+'''==================checkin' type n id of vars================'''
+# print(type(snake_case), type(height), type(age), type(equation))
+# print(complex)
+# print(id(snake_case), id(height), id(age), id(equation))
+
+'''===============Rules For Var Names===================='''
+'''Must start with letter (a-z, A-Z) or underscore (_)
+Can contain letters, digits (0-9), and underscores
+Case sensitive: age and Age are different variables
+Cannot use Python keywords: if, for, while, def, etc.'''
+
