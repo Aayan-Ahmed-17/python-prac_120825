@@ -102,3 +102,18 @@ b = 20
 # print(a, b)
 a, b = b, a
 # print(a, b)
+
+'''ex04 dynamic typing
+# Create a variable that starts as an integer
+# Change it to a string, then to a float, then to a boolean
+# Print the type and value after each change
+'''
+
+dynamic_variable = 20
+# print(type(dynamic_variable))
+dynamic_variable = 'twenty'
+# print(type(dynamic_variable))
+dynamic_variable = 20.00
+# print(type(dynamic_variable))
+dynamic_variable = True
+# print(type(dynamic_variable))
