@@ -31,3 +31,16 @@ import keyword
 # print(keyword.iskeyword("my_var"))                         #F
 # print(keyword.iskeyword("False"))                             #T
 # print(keyword.iskeyword("for"))                                #T
+
+'''ex 02
+# Write a program using these keywords:
+# if, else, for, in, def, return, try, except
+# Create a function that processes a list of numbers and handles errors
+'''
+
+'''ex 03
+# Use these built-in functions in a program:
+# len(), max(), min(), sum(), type(), isinstance()
+# Create a program that analyzes a list of mixed data types
+'''
+
