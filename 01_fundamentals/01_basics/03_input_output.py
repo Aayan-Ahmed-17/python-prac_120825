@@ -49,11 +49,19 @@ number = 42
 # 4. Handles invalid input gracefully
 '''
 
-# a = int(input("Enter first number"))
-# b = int(input("Enter second number"))
-# result = int(a)+int(b)
+a = int(input("Enter first number"))
+b = int(input("Enter second number"))
+opr = input("Enter operator (+, -, /, *)")
+if opr == "+":
+      result = a+b
+if opr == "-":
+      result = a-b
+if opr == "/":
+      result = a/b
+if opr == "*":
+      result = a*b
 
-# print(result)
+print(result)
 
 
 '''ex04 Formatting Practice
