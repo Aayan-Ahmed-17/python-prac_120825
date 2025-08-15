@@ -44,3 +44,15 @@ import keyword
 # Create a program that analyzes a list of mixed data types
 '''
 
+'''ex 04
+# These variable names are invalid because they use keywords.
+# Suggest better alternatives:
+# class = "Python"
+# if = True  
+# for = [1, 2, 3]
+# def = "function"
+'''
+lang = 'Python'
+isValid = True
+nums = [1, 2, 3]
+purpose = "funciton"
