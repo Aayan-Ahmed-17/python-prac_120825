@@ -49,8 +49,28 @@ number = 42
 # 4. Handles invalid input gracefully
 '''
 
-a = int(input("Enter first number"))
-b = int(input("Enter second number"))
-result = int(a)+int(b)
+# a = int(input("Enter first number"))
+# b = int(input("Enter second number"))
+# result = int(a)+int(b)
 
-print(result)
+# print(result)
+
+
+'''ex04 Formatting Practice
+# Given: name="John", age=25, salary=50000.75, gpa=3.67
+# Print using different formatting methods:
+# 1. "John (25) earns $50,000.75 with GPA: 3.7"
+# 2. Right-align name in 10 characters
+# 3. Display salary with comma separators
+# 4. Show GPA with 1 decimal place
+'''
+
+name="John"
+age=25
+salary=50000.75
+gpa=3.67
+
+print(f"{name} ({age}) earns ${salary} with GPA: {gpa}")
+print(f"{name: >10}")
+print(f"{salary:}")
+print(f"{gpa: .1f}")
