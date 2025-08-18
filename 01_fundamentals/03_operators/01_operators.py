@@ -31,3 +31,15 @@ COMPARISION OPERATORS
 # print(True > False)         #true
 # print("hi" <= "hello")     #false
 # print("2" >= "2")            #true  | both side str needed if want to compare else print(2 >= "2") TypeError: '>=' not supported between instances of 'int' and 'str')
+
+'''
+LOGICAL OPERATORS
+'''
+print(True and True)               #f
+print(False and True)               #f   
+print(True and False)               #f   
+print(True or True)                  #T
+print(False or True)                  #T
+print(False or False)                  #F
+print(not True)                         #f
+print(not False)                        #T
