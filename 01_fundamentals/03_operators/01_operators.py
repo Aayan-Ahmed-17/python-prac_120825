@@ -56,20 +56,29 @@ ASSIGNMENT OPERATORS
 **= # Exponent and assign
 '''   
 
-basic_opr =   2                     #simply assigning value
-print(basic_opr)
-basic_opr += 4                    #basic_opr = basic_opr + 4
-print(basic_opr)
-basic_opr -= 3                     # subtractin 3 from basic_opr (6)
-print(basic_opr)
-basic_opr *= 5                      #multiplyin 5 with 3
-print(basic_opr)
-basic_opr /= 3                      #dividin 3  by 15
-print(basic_opr)
-basic_opr //= 2                     # divide then floor to real num 
-print(basic_opr)
-basic_opr %= 1                     # divin modulus of 2 by 1 which is 0
-print(basic_opr)
-basic_opr **= 4                     # 0 ** 4
-print(basic_opr)
+# basic_opr =   2                     #simply assigning value
+# print(basic_opr)
+# basic_opr += 4                    #basic_opr = basic_opr + 4
+# print(basic_opr)
+# basic_opr -= 3                     # subtractin 3 from basic_opr (6)
+# print(basic_opr)
+# basic_opr *= 5                      #multiplyin 5 with 3
+# print(basic_opr)
+# basic_opr /= 3                      #dividin 3  by 15
+# print(basic_opr)
+# basic_opr //= 2                     # divide then floor to real num 
+# print(basic_opr)
+# basic_opr %= 1                     # divin modulus of 2 by 1 which is 0
+# print(basic_opr)
+# basic_opr **= 4                     # 0 ** 4
+# print(basic_opr)
+
+'''
+Identity and Membership
+
+is      # Identity check
+is not  # Negative identity
+in      # Membership check
+not in  # Negative membership
+'''
 
