@@ -25,9 +25,9 @@ ARITHMETIC OPERATORS
 '''
 COMPARISION OPERATORS
 '''
-print(1 == "1")               #false
-print(2 != 1)                   #true
-print(4 < 5 )                   #true
-print(True > False)         #true
-print("hi" <= "hello")     #false
-print("2" >= "2")            #true  | both side str needed if want to compare else print(2 >= "2") TypeError: '>=' not supported between instances of 'int' and 'str')
+# print(1 == "1")               #false
+# print(2 != 1)                   #true
+# print(4 < 5 )                   #true
+# print(True > False)         #true
+# print("hi" <= "hello")     #false
+# print("2" >= "2")            #true  | both side str needed if want to compare else print(2 >= "2") TypeError: '>=' not supported between instances of 'int' and 'str')
