@@ -42,3 +42,18 @@ text = "Python Programming"
 
 text = "Python Programming"
 # print(text, len(text), text.upper(), text.lower(), text[0 : 6], text[-11:], sep='\n')           #text[-11:] =. "Programming"; text[-11] =. P  giving letter on 11th index from last
+
+'''ex 04 List operations
+# Create a list of numbers and perform operations
+numbers = [1, 2, 3, 4, 5]
+# Add number 6, remove number 3, find length, check if 4 is in list
+'''
+
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+numbers.append(6)
+print(numbers)
+numbers.remove(3)
+print(numbers)
+print(len(numbers))
+print(numbers.__contains__(4))
