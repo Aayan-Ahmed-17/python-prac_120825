@@ -50,10 +50,27 @@ numbers = [1, 2, 3, 4, 5]
 '''
 
 numbers = [1, 2, 3, 4, 5]
-print(numbers)
-numbers.append(6)
-print(numbers)
-numbers.remove(3)
-print(numbers)
-print(len(numbers))
-print(numbers.__contains__(4))
+# print(numbers)
+# numbers.append(6)
+# print(numbers)
+# numbers.remove(3)
+# print(numbers)
+# print(len(numbers))
+# print(numbers.__contains__(4))
+
+'''ex05 Boolean prac
+# Given values, create boolean expressions
+x = 10
+y = 5
+z = 15
+# Create expressions using and, or, not operators that evaluate to True and False
+'''
+x = 10
+y = 5
+z = 15
+
+# print(x > y and y < z)
+# print(x < y or y > z)
+# print(x >= z or y <= x)
+# print(x <= z and True >= False)                 #True
+# print(z < x and not x)
