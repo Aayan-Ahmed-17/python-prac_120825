@@ -32,4 +32,13 @@ floor_division= a // b
 modulus = a % b
 exponentiation = a ** b
 
-print(addition, subtraction, multiplication, division, floor_division, modulus, exponentiation, sep='\n')
+# print(addition, subtraction, multiplication, division, floor_division, modulus, exponentiation, sep='\n')
+
+'''ex03 Str operators
+# Given a string, perform various operations
+text = "Python Programming"
+# Print: length, uppercase, lowercase, first 6 characters, last 11 characters
+'''
+
+text = "Python Programming"
+# print(text, len(text), text.upper(), text.lower(), text[0 : 6], text[-11:], sep='\n')           #text[-11:] =. "Programming"; text[-11] =. P  giving letter on 11th index from last
