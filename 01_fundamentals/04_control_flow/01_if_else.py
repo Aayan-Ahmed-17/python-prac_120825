@@ -31,12 +31,33 @@ status = "adult" if age >= 18 else "minor"
 '''# Membership testing'''
 fruits = ["apple", "banana", "cherry", "melon", "lychee"]         #this is list == array of js
 
-if "mango" in fruits:
-      print("Yes!")
-else:
-      print("No")
+# if "mango" in fruits:
+#       print("Yes!")
+# else:
+#       print("No")
       
-if "grape" not in fruits:
-      print("grape nahi hai")
+# if "grape" not in fruits:
+#       print("grape nahi hai")
+# else:
+#       print("grape hai")
+
+'''# Identity testing'''
+
+nothing = None
+
+if nothing is None:
+      print("Has no value")
 else:
-      print("grape hai")
+      print("has value")
+
+'''Truthiness testing'''
+empty_list = []
+if not empty_list:                        # More pythonic than len(empty_list) == 0
+    print("List is empty")
+
+name = ""
+if name:                                        # Checks if string is not empty
+    print(f"Hello, {name}")
+else:
+    print("Name is empty")
+
