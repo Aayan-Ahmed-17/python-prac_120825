@@ -66,11 +66,36 @@ empty_list = []
 Write a program that takes a number and prints whether it's positive, negative, or zero.
 '''
 
-user_num = int(input("Enter num here : "))
+# user_num = int(input("Enter num here : "))
 
-if user_num < 0: 
-      print(f"{user_num} is negative")
-elif user_num < 1: 
-      print(f"{user_num} is positive")
+# if user_num < 0: 
+#       print(f"{user_num} is negative")
+# elif user_num < 1: 
+#       print(f"{user_num} is positive")
+# else:
+#       print(f"{user_num} is zero")
+
+'''ex02 Grade Calculator
+Create a function that converts numeric grades to letter grades:
+
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+Below 60: F
+'''
+
+user_score = int(input("Enter your score here : "))
+
+if  90 <= user_score <= 100:
+      print(f"{user_score} is b/w 90-100 (A)")
+elif  80 <= user_score <= 89:
+      print(f"{user_score} is b/w 80-89 (B)")
+elif  70 <= user_score<= 79:
+      print(f"{user_score} is b/w 70-79 (C)")
+elif  60 <= user_score <= 69:
+      print(f"{user_score} is b/w 60-69 (D)")
+elif 0 <= user_score < 60:
+      print(f"{user_score} is below 60 (F)")
 else:
-      print(f"{user_num} is zero")
+      print(f"{user_score} Please enter number 0 till 100")
