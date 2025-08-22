@@ -45,19 +45,32 @@ fruits = ["apple", "banana", "cherry", "melon", "lychee"]         #this is list 
 
 nothing = None
 
-if nothing is None:
-      print("Has no value")
-else:
-      print("has value")
+# if nothing is None:
+#       print("Has no value")
+# else:
+#       print("has value")
 
 '''Truthiness testing'''
 empty_list = []
-if not empty_list:                        # More pythonic than len(empty_list) == 0
-    print("List is empty")
+# if not empty_list:                        # More pythonic than len(empty_list) == 0
+#     print("List is empty")
 
-name = ""
-if name:                                        # Checks if string is not empty
-    print(f"Hello, {name}")
+# name = ""
+# if name:                                        # Checks if string is not empty
+#     print(f"Hello, {name}")
+# else:
+#     print("Name is empty")
+
+
+'''ex01 Basic Conditionals
+Write a program that takes a number and prints whether it's positive, negative, or zero.
+'''
+
+user_num = int(input("Enter num here : "))
+
+if user_num < 0: 
+      print(f"{user_num} is negative")
+elif user_num < 1: 
+      print(f"{user_num} is positive")
 else:
-    print("Name is empty")
-
+      print(f"{user_num} is zero")
