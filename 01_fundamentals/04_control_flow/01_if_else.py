@@ -18,12 +18,25 @@ status = "adult" if age >= 18 else "minor"
 
 '''# Chained comparisons (PYTHON UNIQUE!)'''
 
-if y > x < z:                       #no need to type "and" keyword python speciality
-      print("running")
+# if y > x < z:                       #no need to type "and" keyword python speciality
+#       print("running")
 
-if type(age) is int and len(status) >= 2:
-      print("All conditions true")
+# if type(age) is int and len(status) >= 2:
+#       print("All conditions true")
 
+# else:
+#       print(False)
+
+
+'''# Membership testing'''
+fruits = ["apple", "banana", "cherry", "melon", "lychee"]         #this is list == array of js
+
+if "mango" in fruits:
+      print("Yes!")
 else:
-      print(False)
-
+      print("No")
+      
+if "grape" not in fruits:
+      print("grape nahi hai")
+else:
+      print("grape hai")
