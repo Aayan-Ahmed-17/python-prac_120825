@@ -54,17 +54,18 @@ Create a function that converts numeric grades to letter grades:
 60-69: D
 Below 60: F
 '''
-user_score = int(input("Enter your score here : "))
-match user_score:
-      case _ if 90 <= user_score <= 100:
-            print(f"{user_score} is b/w 90-100 (A)")
-      case _ if 80 <= user_score <= 89:
-            print(f"{user_score} is b/w 80-89 (B)")
-      case _ if 70 <= user_score <= 79:
-            print(f"{user_score} is b/w 70-79 (C)")
-      case _ if 60 <= user_score <= 69:
-            print(f"{user_score} is b/w 60-69 (D)")
-      case _ if 0 <= user_score < 60:
-            print(f"{user_score} is less than 60 (F)")
-      case _ :
-            print(f"{user_score} Invalid! please enter number between 0 - 100")
+# user_score = int(input("Enter your score here : "))
+# match user_score:
+#       case _ if 90 <= user_score <= 100:
+#             print(f"{user_score} is b/w 90-100 (A)")
+#       case _ if 80 <= user_score <= 89:
+#             print(f"{user_score} is b/w 80-89 (B)")
+#       case _ if 70 <= user_score <= 79:
+#             print(f"{user_score} is b/w 70-79 (C)")
+#       case _ if 60 <= user_score <= 69:
+#             print(f"{user_score} is b/w 60-69 (D)")
+#       case _ if 0 <= user_score < 60:
+#             print(f"{user_score} is less than 60 (F)")
+#       case _ :
+#             print(f"{user_score} Invalid! please enter number between 0 - 100")
+
