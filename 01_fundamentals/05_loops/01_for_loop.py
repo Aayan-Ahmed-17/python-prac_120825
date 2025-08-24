@@ -12,3 +12,11 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
       
 # for i in range(0, 14, 3):                             #starting from 0 going to 14 and skipping two nums after each third number [0, 3, 6, 9 ... 12]
 #       print(f"hello {i}")
+
+'''range with enumerate for index and value'''
+for i, fruit in enumerate(fruits):
+      print(f"i = {i} and fruit = {fruit}")           #enumerate with index and item
+      
+'''enumerate with custom start'''
+for i, fruit in enumerate(fruits, start=1):
+      print(f"{i} => {fruit}")
