@@ -14,9 +14,14 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
 #       print(f"hello {i}")
 
 '''range with enumerate for index and value'''
-for i, fruit in enumerate(fruits):
-      print(f"i = {i} and fruit = {fruit}")           #enumerate with index and item
+# for i, fruit in enumerate(fruits):
+#       print(f"i = {i} and fruit = {fruit}")           #enumerate with index and item
       
-'''enumerate with custom start'''
-for i, fruit in enumerate(fruits, start=1):
-      print(f"{i} => {fruit}")
+# '''enumerate with custom start'''
+# for i, fruit in enumerate(fruits, start=1):
+#       print(f"{i} => {fruit}")
+      
+'''iterate over string'''
+# my_name = "Aayan Ahmed Tejani"
+# for i, char in enumerate(my_name, start=1):
+#       print(f'Letters in my name {i} => {char}')
