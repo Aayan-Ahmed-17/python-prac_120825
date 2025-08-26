@@ -55,5 +55,19 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
 
 '''ex01
 Write a program that prints the first 10 even numbers.'''
-for i in range(2, 22, 2):
-      print(i)
+# for i in range(2, 22, 2):
+#       print(i)
+
+'''ex02
+Create a function that counts vowels and consonants in a string.'''
+user_input = input("Type any word here: ")
+vowels = 'aeiou'
+vowel_count = 0
+consonant_count = 0
+for char in user_input:
+      if char in vowels:
+            vowel_count += 1
+      else:
+            consonant_count += 1      
+      
+print(consonant_count, vowel_count)
