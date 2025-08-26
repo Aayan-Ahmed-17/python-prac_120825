@@ -38,9 +38,30 @@
 
 '''ex01
 Write a program that prints the first 10 even numbers.'''
-count = 0
-current_even_num = 2
-while count < 10:
-      print(current_even_num)
-      count += 1
-      current_even_num += 2
+# count = 0
+# current_even_num = 2
+# while count < 10:
+#       print(current_even_num)
+#       count += 1
+#       current_even_num += 2
+
+'''ex02
+Create a function that counts vowels and consonants in a string.'''
+user_input = input("Enter Your Input Here: ")
+processed_user_input = user_input.lower().strip()
+vowels = 'aeiou'
+consonant_count = 0
+vowel_count = 0
+char = 0
+
+while char < len(processed_user_input):
+      if processed_user_input[char].isalpha():
+            if processed_user_input[char] in vowels:
+                  vowel_count += 1
+            else:
+                  consonant_count +=1
+      else:
+            continue
+      char += 1
+print(vowel_count, consonant_count)
+      
