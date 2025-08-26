@@ -27,18 +27,24 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
 #       print(f'Letters in my name {i} => {char}')
 
 '''iterate over dictionary / obj with for in loop'''
-person = {"name": "Ahmed", "age": 19, "isStudent": True}
-for key in person:
-      print(f"{key}: {person[key]}")           
+# person = {"name": "Ahmed", "age": 19, "isStudent": True}
+# for key in person:
+#       print(f"{key}: {person[key]}")           
 
 '''better approach of iteration for dictionary'''
-for key, value in person.items():
-      print(i, key)
+# for key, value in person.items():
+#       print(i, key)
       
-for elem in person.items():
-      for sub_elem in elem:
-            print(sub_elem)
+# for elem in person.items():
+#       for sub_elem in elem:
+#             print(sub_elem)
 
-print(person.items())
-print(person)
-print(type(person), type(person.items()))
+# print(person.items())
+# print(person)
+# print(type(person), type(person.items()))
+
+'''Iterate over multiple lists with zip'''
+students = ["umar", "farooq", "zaid", "asad"]
+standards = [4, 5, 8, 9]
+for student, standard in zip(students, standards):
+      print(f"{student} in class {standard}")
