@@ -44,7 +44,11 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
 # print(type(person), type(person.items()))
 
 '''Iterate over multiple lists with zip'''
-students = ["umar", "farooq", "zaid", "asad"]
-standards = [4, 5, 8, 9]
-for student, standard in zip(students, standards):
-      print(f"{student} in class {standard}")
+# students = ["umar", "farooq", "zaid", "asad"]
+# standards = [4, 5, 8, 9]
+# for student, standard in zip(students, standards):
+#       print(f"{student} in class {standard}")
+
+# for i in range(3):
+#       for j in range(4, 7):
+#             print(f"i = {i}, j = {j}")
