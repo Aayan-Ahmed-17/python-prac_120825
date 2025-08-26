@@ -24,14 +24,14 @@
 #             print(num)
       
 '''while loop with complex condition'''
-import random
-attempts = 0
-max_attempts = 5
-while attempts < max_attempts and random.random() > 0.3:
-    print(f"Attempt {attempts + 1}")
-    attempts += 1
-else:
-    if attempts == max_attempts:
-        print("Max attempts reached")
-    else:
-        print("Condition met")
+# import random
+# attempts = 0
+# max_attempts = 5
+# while attempts < max_attempts and random.random() > 0.3:
+#     print(f"Attempt {attempts + 1}")
+#     attempts += 1
+# else:
+#     if attempts == max_attempts:
+#         print("Max attempts reached")
+#     else:
+#         print("Condition met")

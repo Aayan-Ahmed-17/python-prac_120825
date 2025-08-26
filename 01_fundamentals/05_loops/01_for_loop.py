@@ -52,3 +52,8 @@ fruits = ["apple", "banana", "pineapple"]                   #list / array of fru
 # for i in range(3):
 #       for j in range(4, 7):
 #             print(f"i = {i}, j = {j}")
+
+'''ex01
+Write a program that prints the first 10 even numbers.'''
+for i in range(2, 22, 2):
+      print(i)
