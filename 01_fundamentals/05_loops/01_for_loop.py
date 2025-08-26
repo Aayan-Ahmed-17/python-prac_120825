@@ -60,23 +60,24 @@ Write a program that prints the first 10 even numbers.'''
 
 '''ex02
 Create a function that counts vowels and consonants in a string.'''
-user_input = input("Type any word or phrase here: ")
-vowels = 'aeiou'
-vowel_count = 0
-consonant_count = 0
+# user_input = input("Type any word or phrase here: ")
+# vowels = 'aeiou'
+# vowel_count = 0
+# consonant_count = 0
 
-#good prac to check in lowercase()
-processed_input = user_input.lower()
+# #good prac to check in lowercase()
+# processed_input = user_input.lower()
 
-for char in processed_input:
-    # Checks if alphabet
-    if char.isalpha():
-        # checking lowered case alphabet isVowel?
-        if char in vowels:
-            vowel_count += 1
-        else: #if not vowel then consonant
-            consonant_count += 1
+# for char in processed_input:
+#     # Checks if alphabet
+#     if char.isalpha():
+#         # checking lowered case alphabet isVowel?
+#         if char in vowels:
+#             vowel_count += 1
+#         else: #if not vowel then consonant
+#             consonant_count += 1
 
-print(f"Number of Vowels: {vowel_count}")
-print(f"Number of Consonants: {consonant_count}")
+# print(f"Number of Vowels: {vowel_count}")
+# print(f"Number of Consonants: {consonant_count}")
+
 

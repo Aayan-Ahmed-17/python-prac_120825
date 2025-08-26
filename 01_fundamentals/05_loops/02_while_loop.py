@@ -35,3 +35,12 @@
 #         print("Max attempts reached")
 #     else:
 #         print("Condition met")
+
+'''ex01
+Write a program that prints the first 10 even numbers.'''
+count = 0
+current_even_num = 2
+while count < 10:
+      print(current_even_num)
+      count += 1
+      current_even_num += 2
