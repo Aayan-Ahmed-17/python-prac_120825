@@ -5,9 +5,15 @@
 
 # greet()     #function call
 
-def greet_name(name):
-      '''greets with capitalized name'''
-      print(f"Hello! Sir {name.capitalize()}")
+# def greet_name(name):
+#       '''greets with capitalized name'''
+#       print(f"Hello! Sir {name.capitalize()}")
       
 
-greet_name("aayan ahmed")
+# greet_name("aayan ahmed")
+
+def add_two_numbers(a, b):
+      '''returns sum of two numbers'''
+      return  a + b
+
+print(add_two_numbers(11, 5))
