@@ -12,8 +12,13 @@
 
 # greet_name("aayan ahmed")
 
-def add_two_numbers(a, b):
-      '''returns sum of two numbers'''
-      return  a + b
+# def add_two_numbers(a, b):
+#       '''returns sum of two numbers'''
+#       return  a + b
 
-print(add_two_numbers(11, 5))
+# print(add_two_numbers(11, 5))
+
+def mul_two_numbers(a, b = 1):
+      return a*b
+
+print(mul_two_numbers(5))
