@@ -33,8 +33,16 @@ Create a function called calculate_area that takes length and width as arguments
 '''ex02
 Write a function called get_user_info that takes a first_name and last_name as arguments and returns a tuple containing the full name and the length of the full name. For example, for "John" and "Doe", it should return ("John Doe", 8).'''
 
-def get_user_info(f_name, last_name):
-      full_name = f"{f_name} {last_name}"
-      return (full_name, len(full_name))
+# def get_user_info(f_name, last_name):
+#       full_name = f"{f_name} {last_name}"
+#       return (full_name, len(full_name))
 
-print(get_user_info("Aayan", "Ahmed"))
+# print(get_user_info("Aayan", "Ahmed"))
+
+'''ex03
+Write a function called power that takes two arguments, a base and an exponent, and returns the result of the base raised to the power of the exponent. The exponent should have a default value of 2.'''
+
+def power(base, exponent = 2):
+      return base**exponent
+
+print(power(3))
