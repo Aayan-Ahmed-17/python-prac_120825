@@ -47,7 +47,8 @@ Write a function called power that takes two arguments, a base and an exponent, 
 
 # print(power(3))
 
-'''Write a function called count_vowels that takes a string as an argument and returns the total number of vowels (a, e, i, o, u) in the string, ignoring case.'''
+'''ex04
+Write a function called count_vowels that takes a string as an argument and returns the total number of vowels (a, e, i, o, u) in the string, ignoring case.'''
 
 # def count_vowels(str):
 #       vowels = 'aeiou'
@@ -69,3 +70,12 @@ Write a function called power that takes two arguments, a base and an exponent, 
             
 # count_vowel("asldfjkKJEOI")
 
+'''ex05
+Create a function called find_max that takes an arbitrary number of arguments (numbers) and returns the largest number among them. You can use *args to handle a variable number of arguments.
+'''
+
+def find_max(*param):
+      '''returns the biggest number among all'''
+      return max(param)
+
+print(find_max(2,3,4,5,6))
