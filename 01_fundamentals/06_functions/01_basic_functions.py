@@ -42,7 +42,30 @@ Write a function called get_user_info that takes a first_name and last_name as a
 '''ex03
 Write a function called power that takes two arguments, a base and an exponent, and returns the result of the base raised to the power of the exponent. The exponent should have a default value of 2.'''
 
-def power(base, exponent = 2):
-      return base**exponent
+# def power(base, exponent = 2):
+#       return base**exponent
 
-print(power(3))
+# print(power(3))
+
+'''Write a function called count_vowels that takes a string as an argument and returns the total number of vowels (a, e, i, o, u) in the string, ignoring case.'''
+
+# def count_vowels(str):
+#       vowels = 'aeiou'
+#       str_lower = str.lower()
+#       total_vowels = 0
+#       for char in str_lower:
+#             if char in vowels:
+#                   total_vowels += 1
+            
+#       return total_vowels
+
+# print(count_vowels("aeiou"))
+
+'''alternate and advanced python way to solve'''
+
+# def count_vowel(str):
+#       vowels = 'aeiou'
+#       print(sum(1 for char in str.lower() if char in vowels))
+            
+# count_vowel("asldfjkKJEOI")
+
