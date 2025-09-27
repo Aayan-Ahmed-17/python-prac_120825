@@ -84,5 +84,9 @@ target_character = "Hello World"
 # print(list("apple,banana,cherry"))	
 # print("-".join(['A', 'B', 'C']))	
 
-print("dog cat dog".replace("catr", "mouse"))	#won't give any err remains same
-print(target_character.find("He"))              #case sentive | return index | -1 if not found
+# print("dog cat dog".replace("catr", "mouse"))	#won't give any err remains same
+# print(target_character.find("He"))              #case sentive | return index | -1 if not found
+
+print("abc".isdigit())	      #false when any of the character is other than digit else true
+print("123".isalpha())        #false when any of the character is other than alphabet else true
+print("1lsdjf@".isalnum()) #True only when either all the elems are  of nums or alphabets
