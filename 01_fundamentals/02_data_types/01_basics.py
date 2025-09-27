@@ -81,5 +81,8 @@ How can you access a specific character within a string?
 target_character = "Hello World"
 # print(target_character[0])
 
-print(list("apple,banana,cherry"))	
-print("-".join(['A', 'B', 'C']))	
+# print(list("apple,banana,cherry"))	
+# print("-".join(['A', 'B', 'C']))	
+
+print("dog cat dog".replace("catr", "mouse"))	#won't give any err remains same
+print(target_character.find("He"))              #case sentive | return index | -1 if not found
