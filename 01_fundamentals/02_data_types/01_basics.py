@@ -74,3 +74,12 @@ z = 15
 # print(x >= z or y <= x)
 # print(x <= z and True >= False)                 #True
 # print(z < x and not x)
+
+'''ex 06
+How can you access a specific character within a string?
+'''
+target_character = "Hello World"
+# print(target_character[0])
+
+print(list("apple,banana,cherry"))	
+print("-".join(['A', 'B', 'C']))	
