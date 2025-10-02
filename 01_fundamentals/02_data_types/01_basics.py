@@ -90,3 +90,6 @@ target_character = "Hello World"
 print("abc".isdigit())	      #false when any of the character is other than digit else true
 print("123".isalpha())        #false when any of the character is other than alphabet else true
 print("1lsdjf@".isalnum()) #True only when either all the elems are  of nums or alphabets
+
+
+int("sjdfljsdfljs")
