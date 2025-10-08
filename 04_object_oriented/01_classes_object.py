@@ -2,12 +2,21 @@
 
 #Create class
 class Car:
-      standand = "Elite Class"
+      standand = "Elite Class"      #class attribute
 
 simple_obj = Car()
+# print(simple_obj)
 
-print(simple_obj)
-
-lst = [1,2,3,4,5,5]
-lst.append(7)
-print(lst)
+#Class with class attr, init(), instance attr
+class Mobile:
+      brand = "Samsung"      #class attr | it's not imp | shared by all instances created by this class
+      
+      def __init__(self, model_name, price, is_new, in_stock):
+            self.model_name = model_name
+            self.price = price
+            self.is_new = is_new
+            self.in_stock = in_stock
+            
+mobile1 = Mobile("S 25 ultra", 500000, True, True)
+print(mobile1)
+print(Mobile)
