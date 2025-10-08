@@ -29,4 +29,20 @@ import random
 rndm_num = random.randint(1, 100)
 user_guess = int(input("Guess ur number (1-100):   "))
 
-print(f"rndm_num: {rndm_num} and ur guess is: {user_guess}")
+hint_remarks = {
+      "Too High": 15,
+      "Too Low": 15,
+      "Too Near": 5,
+      "High": 10,
+      "Low": 10,
+      }
+
+# difference = rndm_num - user_guess
+
+match user_guess:
+      case  rndm_num if  rndm_num > user_guess:
+            print("low")
+      case  rndm_num if  rndm_num < user_guess:
+            print("high")
+
+# print(f"rndm_num: {rndm_num} and ur guess is: {user_guess}")
