@@ -77,7 +77,7 @@ class Employee:
 employee_1 = Employee("Owais", 123, 80000)
 # print(employee_1.__dict__) # __dict__ used to view them like a dict or obj of js
 
-'''Design a class SeriesCalculator that calculates the sum of an arithmetic series.'''
+'''exercise 04: Design a class SeriesCalculator that calculates the sum of an arithmetic series.'''
 class SeriesCalculator:
     def calculate_sum(self, n, a=1, d=2):
         # Sum of the first n terms of an arithmetic series
@@ -86,3 +86,37 @@ class SeriesCalculator:
 # Test the calculator
 sc = SeriesCalculator()
 print("Sum of series:", sc.calculate_sum(6))
+
+'''Exercise 5: Create a class MaxFinder that identifies the largest number in a list.'''
+
+#my_solution
+# class MaxFInder:
+#       def __init__(self, num_list):
+#             self.num_list = num_list
+            
+#       def find_max(self):
+#             frst_elem = self.num_list[0]
+#             for num in self.num_list:
+#                   if num > frst_elem:
+#                         frst_elem = num
+#                   else:
+#                         continue
+            
+#             return frst_elem
+
+# lst_1 = MaxFInder([1,2,5,8,3,7,12,34,7])
+# print(lst_1.find_max())
+
+#web solution 
+class MaxFinder:
+    def __init__(self, numbers):
+        self.numbers = numbers
+
+    def find_max(self):
+        if not self.numbers:
+            return "List is empty"
+        return max(self.numbers)
+
+# Example
+finder = MaxFinder([1,2,5,8,3,7,12,34,7])
+print("The largest number is:", finder.find_max())
