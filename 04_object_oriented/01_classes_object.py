@@ -33,23 +33,32 @@ mobile1.price = 600000
 '''
 
 #my code
-class Greeter:
-      def __init__(self, name):
-            self.name = name
+'''# class Greeter:'''
+#       def __init__(self, name):
+#             self.name = name
             
-      def greet(self):
-            return f"Hello {self.name}"
+#       def greet(self):
+#             return f"Hello {self.name}"
 
-user1 = Greeter("Aayan Ahmed")
-print(user1.greet())
+# user1 = Greeter("Aayan Ahmed")
+# print(user1.greet())
 
-#greeek for greek code
-class Greeter:
-    def greet(self, name):
-        print(f"Hello, {name}!")
+''' #greeek for greek code'''
+# class Greeter:
+#     def greet(self, name):
+#         print(f"Hello, {name}!")
 
-# Example usage:
-g = Greeter()
-g.greet("Gabriel")
+# # Example usage:
+# g = Greeter()
+# g.greet("Gabriel")
 
+'''Exercise 2: Develop a class Calculator with methods to add and subtract two numbers.'''
+class Calculator: 
+      def add(self, num1, num2):
+            return num1 + num2
+      def subtract(self, num1, num2):
+            return num1 -  num2
 
+calculation = Calculator()
+print(calculation.add(23, 6))
+print(calculation.subtract(2,16))
