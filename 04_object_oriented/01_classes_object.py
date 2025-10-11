@@ -60,5 +60,19 @@ class Calculator:
             return num1 -  num2
 
 calculation = Calculator()
-print(calculation.add(23, 6))
-print(calculation.subtract(2,16))
+# print(calculation.add(23, 6))
+# print(calculation.subtract(2,16))
+
+'''Exercise 3: Build a class Employee with multiple constructors that can initialize an employee object in different ways.
+Start: a = 1
+Common difference: d = 2
+n terms: 5
+'''
+class Employee:
+      def __init__(self, name: str, id: int, salary: int):
+            self.name = name
+            self.id = id
+            self.salary = salary
+
+employee_1 = Employee("Owais", 123, 80000)
+# print(employee_1.__dict__) # __dict__ used to view them like a dict or obj of js
