@@ -76,3 +76,13 @@ class Employee:
 
 employee_1 = Employee("Owais", 123, 80000)
 # print(employee_1.__dict__) # __dict__ used to view them like a dict or obj of js
+
+'''Design a class SeriesCalculator that calculates the sum of an arithmetic series.'''
+class SeriesCalculator:
+    def calculate_sum(self, n, a=1, d=2):
+        # Sum of the first n terms of an arithmetic series
+        return n * (2 * a + (n - 1) * d) // 2
+
+# Test the calculator
+sc = SeriesCalculator()
+print("Sum of series:", sc.calculate_sum(6))
