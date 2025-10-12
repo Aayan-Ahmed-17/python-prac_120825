@@ -159,37 +159,86 @@ owner_2.deposit(480000)
 '''
 
 #my_code
-class TodoList:
-      def __init__(self, tasks: list):
-           self.tasks = tasks
+# class TodoList:
+#       def __init__(self, tasks: list):
+#            self.tasks = tasks
            
+#       def add_task(self, task):
+#             self.tasks.append(task)
+            
+#       def remove_task(self, index : int):
+#             if (index < 0 or index >= len(self.tasks)):
+#                   print ("Index should be greater or equal to 0 but less than the length of the list.")
+#                   return
+            
+#             del self.tasks[index]
+            
+#       def show_tasks(self):
+#             return self.tasks
+      
+#       def count_tasks(self):
+#             return len(self.tasks)
+            
+# weekday_tasks = TodoList(["utho", "tayyar ho", "office jao", "ghar aao", "so jao"])  
+# sunday_tasks = TodoList(["mat utho", "pare raho", "duniya faani ha",  "hume neend pyari ha"])  
+# print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
+
+# sunday_tasks.add_task("raat ko jage raho")
+# weekday_tasks.remove_task(8)
+# print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
+
+# print(f'''
+# weekday_tasks.show_tasks() {weekday_tasks.show_tasks()}
+# sunday_tasks.show_tasks() {sunday_tasks.show_tasks()}
+# weekday_tasks.count_tasks() {weekday_tasks.count_tasks()}
+# sunday_tasks.count_tasks() {sunday_tasks.count_tasks()}
+# ''')
+
+# gemini code
+class TodoList:
+      
+      def __init__(self):
+            # Initializes the task list as empty
+            self.tasks = []
+            
       def add_task(self, task):
             self.tasks.append(task)
+            print(f"Task added: '{task}'")
             
-      def remove_task(self, index : int):
-            if (index < 0 or index >= len(self.tasks)):
-                  print ("Index should be greater or equal to 0 but less than the length of the list.")
-                  return
-            
-            del self.tasks[index]
+      def remove_task(self, index):
+            # Check if the index is valid
+            if 0 <= index < len(self.tasks):
+                  removed_task = self.tasks.pop(index)
+                  return f"Removed task at index {index}: '{removed_task}'"
+            else:
+                  return f"Error: Invalid index ({index}). Must be between 0 and {len(self.tasks) - 1}."
             
       def show_tasks(self):
-            return self.tasks
+            if not self.tasks:
+                  return "Your to-do list is empty! 🎉"
+            
+            print("--- TO-DO LIST ---")
+            for i, task in enumerate(self.tasks):
+                  print(f"{i}: {task}")
+            return "------------------" # Return a simple confirmation/separator
       
       def count_tasks(self):
+            # 💡 CORRECTED: Must return the result
             return len(self.tasks)
-            
-weekday_tasks = TodoList(["utho", "tayyar ho", "office jao", "ghar aao", "so jao"])  
-sunday_tasks = TodoList(["mat utho", "pare raho", "duniya faani ha",  "hume neend pyari ha"])  
-print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
 
-sunday_tasks.add_task("raat ko jage raho")
-weekday_tasks.remove_task(8)
-print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
+# Example Usage:
+my_list = TodoList()
+my_list.add_task("Buy groceries")
+my_list.add_task("Finish Python exercise")
+my_list.add_task("Call mechanic")
+print("\n--- Show Tasks ---")
+my_list.show_tasks()
+print("------------------")
 
-print(f'''
-weekday_tasks.show_tasks() {weekday_tasks.show_tasks()}
-sunday_tasks.show_tasks() {sunday_tasks.show_tasks()}
-weekday_tasks.count_tasks() {weekday_tasks.count_tasks()}
-sunday_tasks.count_tasks() {sunday_tasks.count_tasks()}
-''')
+print(f"\nTotal tasks: {my_list.count_tasks()}")
+
+print(f"\nAttempting to remove index 1: {my_list.remove_task(1)}")
+print(f"Attempting to remove index 10 (invalid): {my_list.remove_task(10)}")
+
+print("\n--- Show Tasks After Removal ---")
+my_list.show_tasks()
