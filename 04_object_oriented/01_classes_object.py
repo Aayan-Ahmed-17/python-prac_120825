@@ -85,7 +85,7 @@ class SeriesCalculator:
 
 # Test the calculator
 sc = SeriesCalculator()
-print("Sum of series:", sc.calculate_sum(6))
+# print("Sum of series:", sc.calculate_sum(6))
 
 '''Exercise 5: Create a class MaxFinder that identifies the largest number in a list.'''
 
@@ -147,9 +147,49 @@ class BankAccount:
 
 owner_1 = BankAccount("ACC32134", 5000000, "Usman")
 owner_2 = BankAccount("ACC45632", 20000, "Rafay")
-print(owner_1.__dict__, owner_2.__dict__, sep='\n')
+# print(owner_1.__dict__, owner_2.__dict__, sep='\n')
 
 owner_1.withdraw(4900000)
 owner_2.deposit(480000)
-print(owner_1.__dict__, owner_2.__dict__, sep='\n')
+# print(owner_1.__dict__, owner_2.__dict__, sep='\n')
 
+'''Exercise 07: Create a TodoList class
+# - Instance variable: tasks (list)
+# - Methods: add_task(task), remove_task(index), show_tasks(), count_tasks()
+'''
+
+#my_code
+class TodoList:
+      def __init__(self, tasks: list):
+           self.tasks = tasks
+           
+      def add_task(self, task):
+            self.tasks.append(task)
+            
+      def remove_task(self, index : int):
+            if (index < 0 or index >= len(self.tasks)):
+                  print ("Index should be greater or equal to 0 but less than the length of the list.")
+                  return
+            
+            del self.tasks[index]
+            
+      def show_tasks(self):
+            return self.tasks
+      
+      def count_tasks(self):
+            return len(self.tasks)
+            
+weekday_tasks = TodoList(["utho", "tayyar ho", "office jao", "ghar aao", "so jao"])  
+sunday_tasks = TodoList(["mat utho", "pare raho", "duniya faani ha",  "hume neend pyari ha"])  
+print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
+
+sunday_tasks.add_task("raat ko jage raho")
+weekday_tasks.remove_task(8)
+print(weekday_tasks.__dict__, sunday_tasks.__dict__, sep='\n')
+
+print(f'''
+weekday_tasks.show_tasks() {weekday_tasks.show_tasks()}
+sunday_tasks.show_tasks() {sunday_tasks.show_tasks()}
+weekday_tasks.count_tasks() {weekday_tasks.count_tasks()}
+sunday_tasks.count_tasks() {sunday_tasks.count_tasks()}
+''')
