@@ -119,4 +119,12 @@ class MaxFinder:
 
 # Example
 finder = MaxFinder([1,2,5,8,3,7,12,34,7])
-print("The largest number is:", finder.find_max())
+# print("The largest number is:", finder.find_max())
+
+std = {
+      "name": "Hello",
+      "id": 12234,
+      "is_enrolled": True,
+}
+std.update({"id": 55516})
+print(std)
