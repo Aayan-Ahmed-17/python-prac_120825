@@ -121,10 +121,35 @@ class MaxFinder:
 finder = MaxFinder([1,2,5,8,3,7,12,34,7])
 # print("The largest number is:", finder.find_max())
 
-std = {
-      "name": "Hello",
-      "id": 12234,
-      "is_enrolled": True,
-}
-std.update({"id": 55516})
-print(std)
+'''Exercise 06: Create a BankAccount class
+# - Instance variables: account_number, balance, owner_name
+# - Methods: deposit(amount), withdraw(amount), get_balance()
+# - Ensure balance never goes negative
+'''
+
+class BankAccount:
+      def __init__(self, account_number, balance, owner_name):
+            self.account_number = account_number
+            self.balance = balance
+            self.owner_name = owner_name
+            
+      def deposit(self, amount):
+            self.balance += amount
+      
+      def withdraw(self, amount):
+            if (amount <= self.balance): 
+                  self.balance -= amount
+            else:
+                  print(f"Withdrawal failed for {self.owner_name}: Insufficient funds. Available: {self.balance}")
+      
+      def get_balance(self):
+            return f"{self.owner_name} has {self.balance} amount in his account {self.account_number}"
+
+owner_1 = BankAccount("ACC32134", 5000000, "Usman")
+owner_2 = BankAccount("ACC45632", 20000, "Rafay")
+print(owner_1.__dict__, owner_2.__dict__, sep='\n')
+
+owner_1.withdraw(4900000)
+owner_2.deposit(480000)
+print(owner_1.__dict__, owner_2.__dict__, sep='\n')
+
