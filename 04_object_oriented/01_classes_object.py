@@ -266,8 +266,24 @@ class ShoppingCart():
                   }
                   print(f"Added {item_name} to cart: {quantity} x ${price:.2f}")
             
-      def reove_item(self):
-            pass
+      def remove_item(self, item_name, quantity = None):
+            if item_name not in self.items:
+                  print(f" {item_name} not in cart")
+                  return
+            
+            if quantity is None:
+                  del self.items[item_name]
+                  print(f"Removed {item_name} from cart")
+
+            else:
+                  current_quantity = self.items[item_name]['quantity']
+                  if quantity >= current_quantity:
+                        del self.items[item_name]
+                        print(f"Removed all {item_name} from cart")
+                  else:
+                        self.items[item_name]['quantity'] -= quantity
+                        remaining = self.items[item_name]['quantity']
+                        print(f"Removed {quantity} {item_name} (s). {remaining} remaining")
       
       def calculate_total(self):
             pass
