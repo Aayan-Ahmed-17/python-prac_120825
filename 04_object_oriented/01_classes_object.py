@@ -226,19 +226,59 @@ class TodoList:
             # 💡 CORRECTED: Must return the result
             return len(self.tasks)
 
-# Example Usage:
-my_list = TodoList()
-my_list.add_task("Buy groceries")
-my_list.add_task("Finish Python exercise")
-my_list.add_task("Call mechanic")
-print("\n--- Show Tasks ---")
-my_list.show_tasks()
-print("------------------")
+# # Example Usage:
+# my_list = TodoList()
+# my_list.add_task("Buy groceries")
+# my_list.add_task("Finish Python exercise")
+# my_list.add_task("Call mechanic")
+# # print("\n--- Show Tasks ---")
+# my_list.show_tasks()
+# # print("------------------")
 
-print(f"\nTotal tasks: {my_list.count_tasks()}")
+# # print(f"\nTotal tasks: {my_list.count_tasks()}")
 
-print(f"\nAttempting to remove index 1: {my_list.remove_task(1)}")
-print(f"Attempting to remove index 10 (invalid): {my_list.remove_task(10)}")
+# # print(f"\nAttempting to remove index 1: {my_list.remove_task(1)}")
+# # print(f"Attempting to remove index 10 (invalid): {my_list.remove_task(10)}")
 
-print("\n--- Show Tasks After Removal ---")
-my_list.show_tasks()
+# print("\n--- Show Tasks After Removal ---")
+# my_list.show_tasks()
+
+'''exercise 08: Create a ShoppingCart class
+# - Track items with quantities and prices
+# - Methods: add_item(), remove_item(), calculate_total(), apply_discount()
+# - Discount should be a percentage
+'''
+
+class ShoppingCart():
+      def __init__(self):
+            """Initialize an empty shopping cart"""
+            # Dictionary to store items: {item_name: {'price': float, 'quantity': int}}
+            self.items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
+            
+      def add_item(self, item_name, price, quantity):
+            if item_name in self.items:
+                  self.items[item_name]["quantity"] += quantity
+                  print(f"Item added {self.items[item_name]}")
+            else:
+                  self.items[item_name] = {
+                        "price": price,
+                        "quantity": quantity
+                  }
+                  print(f"Added {item_name} to cart: {quantity} x ${price:.2f}")
+            
+      def reove_item(self):
+            pass
+      
+      def calculate_total(self):
+            pass
+      
+      def apply_discount(self):
+            pass
+      
+      
+items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
+
+items['Laptop']["quantity"] = 2
+
+shop = ShoppingCart()
+shop.add_item("Laptop", 200.00, 4)
