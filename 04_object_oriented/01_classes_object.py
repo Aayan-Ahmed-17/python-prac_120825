@@ -286,7 +286,12 @@ class ShoppingCart():
                         print(f"Removed {quantity} {item_name} (s). {remaining} remaining")
       
       def calculate_total(self):
-            pass
+            total = 0
+            for item_name, details in self.items.items():
+                  item_total = details['price'] * details['quantity']
+                  total += item_total
+                  
+            return total
       
       def apply_discount(self):
             pass
@@ -295,6 +300,8 @@ class ShoppingCart():
 items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
 
 items['Laptop']["quantity"] = 2
+# print("items.items()", items.items())
 
 shop = ShoppingCart()
-shop.add_item("Laptop", 200.00, 4)
+# shop.add_item("Laptop", 200.00, 4)
+# print(shop.calculate_total())
