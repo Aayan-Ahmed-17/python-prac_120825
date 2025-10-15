@@ -293,8 +293,19 @@ class ShoppingCart():
                   
             return total
       
-      def apply_discount(self):
-            pass
+      def apply_discount(self, percentage):
+            gross_total = self.calculate_total
+            discount_amount = gross_total * (percentage / 100)
+            final_price = gross_total  - discount_amount
+            
+            result = {
+                  "original_total": gross_total,
+                  "discount_percentage": percentage,
+                  "discount_amount": discount_amount,
+                  "final_price": final_price
+            }
+            
+            return result
       
       
 items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
