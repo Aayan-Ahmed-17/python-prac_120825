@@ -355,10 +355,14 @@ class ShoppingCart:
         return result
 
 
-cart = ShoppingCart()
-cart.add_item("T-Shirt", 25.00, 3)
-cart.add_item("Book", 15.00, 4)
-total = cart.calculate_total()  # Should be (25 * 3) + (15 * 1) = 90.0
-final_price = cart.apply_discount(10)  # Should be 90.0 * 0.90 = 81.0
-print(total, final_price, sep="\n")
-print(cart.__dict__)
+# cart = ShoppingCart()
+# cart.add_item("T-Shirt", 25.00, 3)
+# cart.add_item("Book", 15.00, 4)
+# total = cart.calculate_total()  # Should be (25 * 3) + (15 * 1) = 90.0
+# final_price = cart.apply_discount(10)  # Should be 90.0 * 0.90 = 81.0
+# # print(total, final_price, sep="\n")
+# # print(cart.__dict__)
+
+menu_prices = {"espresso": 3.50, "latte": 4.50, "cappuccino": 4.00}
+menu_prices.update({"espresso": 10.50})
+print(menu_prices)
