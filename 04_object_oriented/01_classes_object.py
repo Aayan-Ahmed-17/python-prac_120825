@@ -363,6 +363,25 @@ class ShoppingCart:
 # # print(total, final_price, sep="\n")
 # # print(cart.__dict__)
 
-menu_prices = {"espresso": 3.50, "latte": 4.50, "cappuccino": 4.00}
-menu_prices.update({"espresso": 10.50})
-print(menu_prices)
+"""instance, static, class method prac | real scenario to use all three of them | Crumble example"""
+
+
+class CoffeeShop:
+    brand_name = "Crumble"
+    total_shop = 0
+    menu_prices = {
+        "kunafa_cookie": 450.00,
+        "espresso": 250.00,
+        "latte": 300.00,
+        "cappuccino": 350.00,
+    }
+
+    def __init__(self, location, manager):
+        #Instance vars (unique to this instance only)
+        self.location = location
+        self.manager = manager
+        self.daily_revenue = 0
+        self.customer_today = 0
+        CoffeeShop.total_shop += 1
+
+      
