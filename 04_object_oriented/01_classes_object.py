@@ -253,7 +253,6 @@ class ShoppingCart():
       def __init__(self):
             """Initialize an empty shopping cart"""
             # Dictionary to store items: {item_name: {'price': float, 'quantity': int}}
-            self.items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
             
       def add_item(self, item_name, price, quantity):
             if item_name in self.items:
@@ -294,7 +293,7 @@ class ShoppingCart():
             return total
       
       def apply_discount(self, percentage):
-            gross_total = self.calculate_total
+            gross_total = self.calculate_total()
             discount_amount = gross_total * (percentage / 100)
             final_price = gross_total  - discount_amount
             
@@ -307,12 +306,10 @@ class ShoppingCart():
             
             return result
       
-      
-items = {'Laptop': {'price': 1200, 'quantity': 1}, 'Mouse': {'price': 25, 'quantity': 2}}
-
-items['Laptop']["quantity"] = 2
-# print("items.items()", items.items())
-
-shop = ShoppingCart()
-# shop.add_item("Laptop", 200.00, 4)
-# print(shop.calculate_total())
+cart = ShoppingCart()
+cart.add_item("T-Shirt", 25.00, 3)
+cart.add_item("Book", 15.00, 4)
+total = cart.calculate_total() # Should be (25 * 3) + (15 * 1) = 90.0
+final_price = cart.apply_discount(10) # Should be 90.0 * 0.90 = 81.0      
+print(total, final_price, sep='\n')
+print(cart.__dict__)
