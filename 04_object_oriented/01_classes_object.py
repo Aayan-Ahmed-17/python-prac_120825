@@ -385,7 +385,7 @@ class CoffeeShop:
         CoffeeShop.total_shop += 1
 
     # ====================== Instance Methods ====================
-    #Works with specific shops data
+    # Works with specific shops data
     def sell_coffee(self, coffee_type, quantity):
         """This shop sells coffee and updates ITS revenue"""
         if coffee_type in CoffeeShop.menu_prices:
@@ -394,8 +394,12 @@ class CoffeeShop:
             self.daily_revenue += sale_amount
             self.customer_today += 1
             return f"{self.location} shop sold {quantity} {coffee_type}(s) for ${sale_amount}"
-      
-        else: 
+
+        else:
             return f"{coffee_type} is not available"
 
-            
+    def get_performance(self):
+        """Gets This shops performance"""
+        return f"{self.location}: ${self.daily_revenue} revenue, {self.customers_today} customers"
+    
+    
