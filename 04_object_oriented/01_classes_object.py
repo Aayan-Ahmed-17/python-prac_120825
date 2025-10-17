@@ -377,11 +377,25 @@ class CoffeeShop:
     }
 
     def __init__(self, location, manager):
-        #Instance vars (unique to this instance only)
+        # Instance vars (unique to this instance only)
         self.location = location
         self.manager = manager
         self.daily_revenue = 0
         self.customer_today = 0
         CoffeeShop.total_shop += 1
 
+    # ====================== Instance Methods ====================
+    #Works with specific shops data
+    def sell_coffee(self, coffee_type, quantity):
+        """This shop sells coffee and updates ITS revenue"""
+        if coffee_type in CoffeeShop.menu_prices:
+            price = self.menu_prices[coffee_type]
+            sale_amount = price * quantity
+            self.daily_revenue += sale_amount
+            self.customer_today += 1
+            return f"{self.location} shop sold {quantity} {coffee_type}(s) for ${sale_amount}"
       
+        else: 
+            return f"{coffee_type} is not available"
+
+            
