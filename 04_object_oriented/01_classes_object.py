@@ -402,4 +402,9 @@ class CoffeeShop:
         """Gets This shops performance"""
         return f"{self.location}: ${self.daily_revenue} revenue, {self.customers_today} customers"
     
-    
+    #====================== Class Method ========================
+    #Works with the entire brand / company data
+    @classmethod
+    def update_menu_price(cls, new_prices: list):
+        cls.menu_prices.update(new_prices)
+        return f"Menu updated across all {cls.total_shop} shops of {CoffeeShop.brand_name}"
