@@ -407,4 +407,4 @@ class CoffeeShop:
     @classmethod
     def update_menu_price(cls, new_prices: list):
         cls.menu_prices.update(new_prices)
-        return f"Menu updated across all {cls.total_shop} shops of {CoffeeShop.brand_name}"
+        return f"Menu updated across all {cls.total_shop} shops of {cls.brand_name}"
