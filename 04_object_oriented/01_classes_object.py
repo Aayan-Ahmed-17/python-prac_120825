@@ -401,10 +401,24 @@ class CoffeeShop:
     def get_performance(self):
         """Gets This shops performance"""
         return f"{self.location}: ${self.daily_revenue} revenue, {self.customers_today} customers"
-    
-    #====================== Class Method ========================
-    #Works with the entire brand / company data
+
+    # ====================== Class Method ========================
+    # Works with the entire brand / company data
     @classmethod
     def update_menu_price(cls, new_prices: list):
         cls.menu_prices.update(new_prices)
         return f"Menu updated across all {cls.total_shop} shops of {cls.brand_name}"
+
+    @classmethod
+    def open_new_shop(cls, location, manager):
+        """
+        Alternative constructor - factory method
+        """
+        print(f"🎉 Opening new {cls.brand_name} at {location}")
+        return cls(location, manager)
+
+    @classmethod
+    def get_total_shop(cls):
+        print(f"Total no of shops are {cls.total_shop}")
+
+   
