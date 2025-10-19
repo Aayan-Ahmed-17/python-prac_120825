@@ -421,4 +421,7 @@ class CoffeeShop:
     def get_total_shop(cls):
         print(f"Total no of shops are {cls.total_shop}")
 
-   
+    @staticmethod
+    def calculate_tip(bill_amount, tip_perventage=15):
+        """Calculate tip - same formula everywhere"""
+        return f"Total Bill_amount is {bill_amount} and Tip is {(bill_amount * tip_perventage) / 100:.2f}"
