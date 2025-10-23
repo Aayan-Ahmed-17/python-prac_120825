@@ -421,7 +421,19 @@ class CoffeeShop:
     def get_total_shop(cls):
         print(f"Total no of shops are {cls.total_shop}")
 
+    # ========== STATIC METHOD ==========
+    # Utility functions - don't need shop data OR brand data
     @staticmethod
     def calculate_tip(bill_amount, tip_perventage=15):
         """Calculate tip - same formula everywhere"""
-        return f"Total Bill_amount is {bill_amount} and Tip is {(bill_amount * tip_perventage) / 100:.2f}"
+        return (bill_amount * tip_perventage) / 100
+    
+    def is_valid_coffee_name(name):
+        """Validate coffee name format"""
+        return len(name) > 2 and name.isalpha()
+        
+    @staticmethod
+    def convert_oz_to_ml(ounces):
+        """Convert ounces to milliliters"""
+        return ounces * 29.5735
+
