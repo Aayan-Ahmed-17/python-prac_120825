@@ -1,0 +1,19 @@
+METHOD
+WHAT IT READS
+RETURN TYPE
+WHEN TO USE
+
+read()
+The entire scroll. It reads all the data from the current position until the end of the file.
+A single string that contains all the file content.
+When you know the file is small or you need all of its content in one go.
+
+readline(): 
+One line at a time. It reads from the current position until it hits a newline character ('\n').
+A single string containing just that one line.
+When you want to process a file line-by-line to save memory, or if you only need the first few lines.
+
+readlines(): 
+All the lines. It reads the entire file and splits it at every newline character.
+A list of strings, where each string in the list is one line from the file.
+When you want to get all the lines and store them in a list for later access or manipulation (like sorting).
