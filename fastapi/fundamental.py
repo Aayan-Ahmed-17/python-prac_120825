@@ -14,7 +14,7 @@ def root():
 """
 
 
-@app.get("/greet/{name}")
+@app.get("/v1/greet/{name}")
 def greetUser(name):
     return {"greet": f"Hello {name}"}
 
@@ -25,6 +25,26 @@ def greetUser(name):
 """
 
 
-@app.get("/add/{num1}/{num2}")
+@app.get("/v1/add/{num1}/{num2}")
 def sum_two_num(num1: int, num2: int):
     return {"sum_result": f"the sum of {num1} & {num2} is {num1 + num2}"}
+
+
+"""=====================smit class work================================"""
+
+
+@app.get("/v1/items")
+def all_items():
+    return [
+        {"message": "All items has been fetched"},
+        {"id": 1, "item": "mobile"},
+        {"id": 2, "item": "laptop"},
+    ]
+
+
+@app.get("v1/items/{item_id}")
+def get_single_item(item_id: int):
+    return [
+        {"message": "Your single item is here"},
+        {"id": item_id, "item": f"Item {item_id}"},
+    ]
