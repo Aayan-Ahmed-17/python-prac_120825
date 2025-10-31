@@ -1,0 +1,17 @@
+import sqlite3
+
+"Going to explore CRUD operations of SQLITE 3 with the help of todo app + using fastapi to test apis and will serve us as a frontend"
+
+"""Initialization | setup sqlite3 db connection"""
+def get_db():
+    conn = sqlite3.connect("todo.db")     #will create todo.db file if not exist | else will be ignored
+    conn.row_factory = sqlite3.Row          #allows us to access our data in a dict form
+    print(conn)
+    return conn
+
+"""establishing db connection"""
+conn = get_db()
+conn.execute("CREATE TABLE IF NOT EXISTS TODO ( id INTEGER PRIMARY KEY AUTOINCREMENT, task TEXT NOT NULL)")  #creates table named todo
+
+conn.commit()
+conn.close()
