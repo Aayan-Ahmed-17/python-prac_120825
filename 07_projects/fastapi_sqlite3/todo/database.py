@@ -11,7 +11,7 @@ def get_db():
 
 """establishing db connection"""
 conn = get_db()
-conn.execute("CREATE TABLE IF NOT EXISTS TODO ( id INTEGER PRIMARY KEY AUTOINCREMENT, task TEXT NOT NULL)")  #creates table named todo
+conn.execute("CREATE TABLE IF NOT EXISTS todo ( id INTEGER PRIMARY KEY AUTOINCREMENT, task TEXT NOT NULL)")  #creates table named todo
 
 conn.commit()
 conn.close()
@@ -19,8 +19,19 @@ conn.close()
 """Create Todo list items in DB"""
 def create_todo_items(task : str):
     conn = get_db()
-    conn.execute("INSERT INTO TODO (task) VALUES (?)", (task,))
+    conn.execute("INSERT INTO todo (task) VALUES (?)", (task,))
     conn.commit()
     conn.close()
 
     return True
+
+"""get all items from todo table in DB"""
+def get_todo_item():
+    conn = get_db()
+    todos = conn.execute("SELECT * FROM todo").fetchall()
+    conn.close()
+    return {
+        "message": "All Todo Items Has Been Fetched",
+        "Items=>": todos
+    }
+
