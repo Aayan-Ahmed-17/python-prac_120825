@@ -59,19 +59,23 @@ def count_lines_readline(filepath):
 
 # count_lines_readline("dummy.txt")
 
-#using iteration method | recommended
+
+# using iteration method | recommended
 def count_lines_efficiently(filepath):
     """
     Counts the number of lines in a file by iterating over the file object.
     """
     line_count = 0
     try:
-      with open(filepath, 'r') as file:
-          for line in file:
-              line_count += 1
-          
-          print(line_count)
-    except:
-      print('An exception occurred')
+        with open(filepath, "r") as file:
+            for line in file:
+                line_count += 1
 
-count_lines_efficiently("dummy.txt")
+            print(line_count)
+    except:
+        print("An exception occurred")
+
+
+# count_lines_efficiently("dummy.txt")
+
+

@@ -15,3 +15,12 @@ conn.execute("CREATE TABLE IF NOT EXISTS TODO ( id INTEGER PRIMARY KEY AUTOINCRE
 
 conn.commit()
 conn.close()
+
+"""Create Todo list items in DB"""
+def create_todo_items(task : str):
+    conn = get_db()
+    conn.execute("INSERT INTO TODO (task) VALUES (?)", (task,))
+    conn.commit()
+    conn.close()
+
+    return True
