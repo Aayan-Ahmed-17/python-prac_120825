@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from database import create_todo_items, get_todo_item
+from database import create_todo_items, get_todo_item, update_todo_Item
 
 app = FastAPI()
 
@@ -18,9 +18,18 @@ def get_todo():
     return res
 
 
-#post todo item route
+# post todo item route
 @app.post("/v1/todo/{task}")
 def create_todo(task):
     todo_task = create_todo_items(task)
 
     return todo_task
+
+
+# update todo item route
+@app.put("/v1/todo")
+def update_todo(task: str, todo_id: int):
+    updated_task = update_todo_Item(task, todo_id)
+    
+    if updated_task:
+        return {"message": "Task updated successfully"}

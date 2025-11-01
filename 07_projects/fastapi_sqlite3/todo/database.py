@@ -1,4 +1,5 @@
 import sqlite3
+from fastapi import HTTPException
 
 "Going to explore CRUD operations of SQLITE 3 with the help of todo app + using fastapi to test apis and will serve us as a frontend"
 
@@ -34,4 +35,16 @@ def get_todo_item():
         "message": "All Todo Items Has Been Fetched",
         "Items=>": todos
     }
+
+def update_todo_Item(task: str, todo_id: int):
+    conn = get_db()
+    query = conn.execute("UPDATE todo SET task = ? WHERE id = ?", (task, todo_id))
+    
+    if query.rowcount == 0:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    conn.commit()
+    conn.close()
+    return True
 
