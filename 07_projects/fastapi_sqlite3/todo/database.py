@@ -48,3 +48,15 @@ def update_todo_Item(task: str, todo_id: int):
     conn.close()
     return True
 
+
+def delete_todo_items(todo_id):
+    conn = get_db()
+    query = conn.execute("DELETE FROM todo WHERE id = ?", (todo_id,))
+
+    if query == 0:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Task Not Found")
+    
+    conn.commit()
+    conn.close()
+    return True

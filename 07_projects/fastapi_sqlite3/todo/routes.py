@@ -1,5 +1,10 @@
 from fastapi import FastAPI
-from database import create_todo_items, get_todo_item, update_todo_Item
+from database import (
+    create_todo_items,
+    get_todo_item,
+    update_todo_Item,
+    delete_todo_items,
+)
 
 app = FastAPI()
 
@@ -30,6 +35,14 @@ def create_todo(task):
 @app.put("/v1/todo")
 def update_todo(task: str, todo_id: int):
     updated_task = update_todo_Item(task, todo_id)
-    
+
     if updated_task:
         return {"message": "Task updated successfully"}
+
+
+@app.delete("/v1/todo")
+def delete_todo(id: int):
+    del_id = delete_todo_items(id)
+
+    if del_id:
+        return {"message": f"{id} todo has been deleted"}
