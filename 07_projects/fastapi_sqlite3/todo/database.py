@@ -60,3 +60,9 @@ def delete_todo_items(todo_id):
     conn.commit()
     conn.close()
     return True
+
+def get_specific_todo(id):
+    conn = get_db()
+    res = conn.execute("SELECT * FROM todo WHERE id = ?", (id,)).fetchone()
+    conn.close()
+    return res

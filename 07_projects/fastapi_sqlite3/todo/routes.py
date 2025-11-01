@@ -4,6 +4,7 @@ from database import (
     get_todo_item,
     update_todo_Item,
     delete_todo_items,
+    get_specific_todo,
 )
 
 app = FastAPI()
@@ -46,3 +47,9 @@ def delete_todo(id: int):
 
     if del_id:
         return {"message": f"{id} todo has been deleted"}
+
+
+@app.get("/v1/todo/{id}")
+def get_single_todo(id: int):
+    res = get_specific_todo(id)
+    return {res}
