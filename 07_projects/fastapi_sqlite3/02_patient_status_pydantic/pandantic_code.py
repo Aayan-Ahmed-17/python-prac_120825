@@ -1,17 +1,21 @@
-from pydantic import BaseModel
-from typing import List, Dict
+from pydantic import BaseModel, Field
+from typing import List, Dict, Optional, Annotated
 
 
 class Patient(BaseModel):
-    id: int
-    name: str
-    city: str
-    age: int
-    gender: str
-    ismarried: bool = False
-    height: float
-    weight: float
-    diseases: List[str]
+    id: Annotated[str, Field(..., description="ID  of the patient", examples="For Example P001")]
+    name: Annotated[str, Field(..., description="Name of the patient", examples="John Doe")]
+    city: Annotated[str, Field(..., description="City where patient lives in..", examples="Karachi")]
+    age: Annotated[int, Field(..., description="Provide the age of patient in numbers")]
+    gender: Annotated[str, Field(..., description="Gender of the patient", examples="Male or Female")]
+    ismarried: Annotated[bool, Field(default=False, examples="True or False")]
+    height: Annotated[float, Field(..., description="Enter height of the patient in Fts", examples="6.1")]
+    weight: Annotated[float, Field(..., description="Enter in weights of patient in kgs")]
+    diseases: Optional[List[str]] = Field(          #this is optional field with default none value and meta data
+        default=None,
+        description="A list of diagnosed medical conditions. This field is optional.",
+        example=["Type 2 Diabetes", "Mild Asthma"],
+    )
     contact_details: Dict[str, str]
 
 
@@ -33,13 +37,13 @@ patient_data = {
     },
 }
 
-# --- Initialization and Validation ---
+""" --- Initialization and Validation ---"""
 try:
     # Pydantic validates the data automatically when creating the instance
     patient_instance = Patient(**patient_data)
 
-    print("✅ Model Initialization Successful!")
-    print(patient_instance)     #type <class '__main__.Patient'>
+    # print("✅ Model Initialization Successful!")
+    # print(patient_instance)     #type <class '__main__.Patient'>
     # print(patient_instance.__dict__)     # shows as a dict
 
 except Exception as e:
