@@ -1,10 +1,13 @@
 import sqlite3
 
 """1) Database Connection & Table Setup"""
-conn = sqlite3.connect("patient.db")
-conn.row_factory = sqlite3.Row
+def get_db():
+    conn = sqlite3.connect("patient.db")
+    conn.row_factory = sqlite3.Row
+    return conn
 
 # Creation of Table
+conn = get_db()
 conn.execute(
     """
              CREATE TABLE IF NOT EXIST patients (
