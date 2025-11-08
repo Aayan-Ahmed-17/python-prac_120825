@@ -58,5 +58,24 @@ def get_patients_data():
     cursor = conn.cursor()
 
     data = cursor.execute("SELECT * FROM patients").fetchall()
+    conn.close()
 
     return data
+
+
+"""4) get one patient only"""
+
+
+def get_single_patient_data(patient_id):
+    conn = get_db()
+    cursor = conn.cursor()
+
+    data = cursor.execute(
+        "SELECT * FROM patients WHERE id = ?", (patient_id,)
+    ).fetchone()
+    conn.close()
+
+    if data:
+        return data
+
+    return None
