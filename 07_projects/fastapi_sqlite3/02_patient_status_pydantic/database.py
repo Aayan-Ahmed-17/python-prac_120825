@@ -31,7 +31,8 @@ conn.close()
 
 def add_patient_data(patient):
     conn = get_db()
-    conn.execute(
+    cursor = conn.cursor()
+    cursor.execute(
         "INSERT INTO patients (name, city, age, gender, ismarried, height, weight) VALUES (?, ?, ?, ?, ?, ?, ?)",
         (
             patient.name,
@@ -46,4 +47,16 @@ def add_patient_data(patient):
     conn.commit()
     conn.close()
 
-    return {"success": True, "patient_id": patient.id}
+    return {"success": True, "patient_id": cursor.lastrowid}
+
+
+"""3) Get all patients data from db"""
+
+
+def get_patients_data():
+    conn = get_db()
+    cursor = conn.cursor()
+
+    data = cursor.execute("SELECT * FROM patients").fetchall()
+
+    return data

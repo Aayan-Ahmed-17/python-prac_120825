@@ -7,7 +7,7 @@ class Patient(BaseModel):
     city: Annotated[str, Field(..., description="City where patient lives in..", examples=["Karachi"])]
     age: Annotated[int, Field(..., description="Provide the age of patient in numbers")]
     gender: Annotated[str, Field(..., description="Gender of the patient", examples=["Male", "Female"])]
-    ismarried: Annotated[bool, Field(default=False, examples=["True", "False"])]
+    ismarried: Annotated[bool, Field(default=False)]
     height: Annotated[float, Field(..., description="Enter height of the patient in Fts", examples=[5.8, 6.1])]
     weight: Annotated[float, Field(..., description="Enter in weights of patient in kgs", examples=[70.5, 80.0])]
 

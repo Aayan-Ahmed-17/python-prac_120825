@@ -2,3 +2,4 @@ __pycache__/
 myenv/
 todo.db
 patient.db
+data.json
