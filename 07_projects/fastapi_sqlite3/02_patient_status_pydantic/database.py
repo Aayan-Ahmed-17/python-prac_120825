@@ -21,7 +21,7 @@ conn.execute(
              gender TEXT,
              ismarried INTEGER NOT NULL DEFAULT 0,
              height REAL NOT NULL,
-             weight REAL NOT NUL)"""
+             weight REAL NOT NULL)"""
 )
 conn.commit()
 conn.close()
@@ -46,4 +46,4 @@ def add_patient_data(patient):
     conn.commit()
     conn.close()
 
-    return{"success": True, "patient_id": patient.id}
+    return {"success": True, "patient_id": patient.id}

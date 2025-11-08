@@ -3,14 +3,13 @@ from typing import Annotated
 
 
 class Patient(BaseModel):
-    id: Annotated[int, Field(..., description="ID  of the patient", examples="For Example P001")]
-    name: Annotated[str, Field(..., description="Name of the patient", examples="John Doe")]
-    city: Annotated[str, Field(..., description="City where patient lives in..", examples="Karachi")]
+    name: Annotated[str, Field(..., description="Name of the patient", examples=["John Doe"])]
+    city: Annotated[str, Field(..., description="City where patient lives in..", examples=["Karachi"])]
     age: Annotated[int, Field(..., description="Provide the age of patient in numbers")]
-    gender: Annotated[str, Field(..., description="Gender of the patient", examples="Male or Female")]
-    ismarried: Annotated[bool, Field(default=False, examples="True or False")]
-    height: Annotated[float, Field(..., description="Enter height of the patient in Fts", examples="6.1")]
-    weight: Annotated[float, Field(..., description="Enter in weights of patient in kgs")]
+    gender: Annotated[str, Field(..., description="Gender of the patient", examples=["Male", "Female"])]
+    ismarried: Annotated[bool, Field(default=False, examples=["True", "False"])]
+    height: Annotated[float, Field(..., description="Enter height of the patient in Fts", examples=[5.8, 6.1])]
+    weight: Annotated[float, Field(..., description="Enter in weights of patient in kgs", examples=[70.5, 80.0])]
 
 
 # --- Test Data ---
