@@ -1,9 +1,9 @@
 from pydantic import BaseModel, Field
-from typing import List, Dict, Optional, Annotated
+from typing import Annotated
 
 
 class Patient(BaseModel):
-    id: Annotated[str, Field(..., description="ID  of the patient", examples="For Example P001")]
+    id: Annotated[int, Field(..., description="ID  of the patient", examples="For Example P001")]
     name: Annotated[str, Field(..., description="Name of the patient", examples="John Doe")]
     city: Annotated[str, Field(..., description="City where patient lives in..", examples="Karachi")]
     age: Annotated[int, Field(..., description="Provide the age of patient in numbers")]
@@ -11,12 +11,6 @@ class Patient(BaseModel):
     ismarried: Annotated[bool, Field(default=False, examples="True or False")]
     height: Annotated[float, Field(..., description="Enter height of the patient in Fts", examples="6.1")]
     weight: Annotated[float, Field(..., description="Enter in weights of patient in kgs")]
-    diseases: Optional[List[str]] = Field(          #this is optional field with default none value and meta data
-        default=None,
-        description="A list of diagnosed medical conditions. This field is optional.",
-        example=["Type 2 Diabetes", "Mild Asthma"],
-    )
-    contact_details: Dict[str, str]
 
 
 # --- Test Data ---
