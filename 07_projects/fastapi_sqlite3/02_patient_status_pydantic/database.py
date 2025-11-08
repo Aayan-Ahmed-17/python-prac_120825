@@ -29,9 +29,21 @@ conn.close()
 """2) Add data into the table"""
 
 
-def add_patient_data(infos):
+def add_patient_data(patient):
     conn = get_db()
-    conn.execute("INSERT INTO patients (infos) VALUES (?)", (infos,))
+    conn.execute(
+        "INSERT INTO patients (name, city, age, gender, ismarried, height, weight) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        (
+            patient.name,
+            patient.city,
+            patient.age,
+            patient.gender,
+            1 if patient.ismarried else 0,
+            patient.height,
+            patient.weight,
+        ),
+    )
     conn.commit()
     conn.close()
-    return True
+
+    return{"success": True, "patient_id": patient.id}
