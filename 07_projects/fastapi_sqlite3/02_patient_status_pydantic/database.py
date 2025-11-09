@@ -79,3 +79,14 @@ def get_single_patient_data(patient_id):
         return data
 
     return None
+
+"""5) update patient by id"""
+def update_patient_data(patient_id, patient):
+    conn = get_db()
+    cursor = conn.cursor()
+
+    cursor.execute("UPDATE patients SET name=?, city=?, age=?, gender=?, ismarried=?, height=?, weight=? WHERE id = ?", (patient.name, patient.city, patient.age, patient.gender, patient.ismarried, patient.height, patient.weight, patient_id))
+
+    conn.commit()
+    conn.close()
+    return {"sucess": True}

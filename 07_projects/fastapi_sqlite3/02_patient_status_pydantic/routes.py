@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from database import add_patient_data, get_patients_data, get_single_patient_data
+from database import add_patient_data, get_patients_data, get_single_patient_data, update_patient_data
 from pydantic_code import Patient
 
 app = FastAPI()
@@ -36,3 +36,9 @@ def get_single_patient(patient_id: int):
         raise HTTPException(status_code=400, detail="Id not found, please find valid id")
 
     return {"message": "Patient data found", "Patient": res}
+
+@app.put("/v1/patient/{patient_id}")
+def update_patient(patient_id, patient: Patient):
+    res = update_patient_data(patient_id, patient)
+
+    return res
