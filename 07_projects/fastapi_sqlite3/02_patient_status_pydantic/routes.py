@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from database import add_patient_data, get_patients_data, get_single_patient_data, update_patient_data
+from database import add_patient_data, get_patients_data, get_single_patient_data, update_patient_data, delete_patient_data
 from pydantic_code import Patient
 
 app = FastAPI()
@@ -41,4 +41,9 @@ def get_single_patient(patient_id: int):
 def update_patient(patient_id, patient: Patient):
     res = update_patient_data(patient_id, patient)
 
+    return res
+
+@app.delete("/v1/patient/{patient_id}")
+def delete_patient(patient_id : int):
+    res = delete_patient_data(patient_id)
     return res

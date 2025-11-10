@@ -80,13 +80,42 @@ def get_single_patient_data(patient_id):
 
     return None
 
+
 """5) update patient by id"""
+
+
 def update_patient_data(patient_id, patient):
     conn = get_db()
     cursor = conn.cursor()
 
-    cursor.execute("UPDATE patients SET name=?, city=?, age=?, gender=?, ismarried=?, height=?, weight=? WHERE id = ?", (patient.name, patient.city, patient.age, patient.gender, patient.ismarried, patient.height, patient.weight, patient_id))
+    cursor.execute(
+        "UPDATE patients SET name=?, city=?, age=?, gender=?, ismarried=?, height=?, weight=? WHERE id = ?",
+        (
+            patient.name,
+            patient.city,
+            patient.age,
+            patient.gender,
+            patient.ismarried,
+            patient.height,
+            patient.weight,
+            patient_id,
+        ),
+    )
 
     conn.commit()
     conn.close()
     return {"sucess": True}
+
+"""6) Delete patient by id"""
+def delete_patient_data(patient_id):
+    conn = get_db()
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM patients WHERE id = ?", (patient_id,))
+
+    conn.commit()
+    rows_affected = cursor.rowcount
+    conn.close()
+    
+    return rows_affected
+
